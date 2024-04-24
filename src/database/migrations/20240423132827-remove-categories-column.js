@@ -14,6 +14,5 @@ module.exports = {
       type: Sequelize.STRING,
       allowNull: true,
     });
-
-  }
+  },
 };
