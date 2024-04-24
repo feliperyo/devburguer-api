@@ -10,12 +10,12 @@ class OrderController {
                 Yup.object({
                     id: Yup.number().required(),
                     quantity: Yup.number().required(),
-                }),
+                })
             ),
         })
 
         try {
-            schema.validateSync(request.body, { abortEarly: false })
+            await schema.validateSync(request.body, { abortEarly: false })
         } catch (err) {
             return response.status(400).json({ error: err.errors })
         }
