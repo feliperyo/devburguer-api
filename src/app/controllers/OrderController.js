@@ -10,7 +10,7 @@ class OrderController {
                 Yup.object({
                     id: Yup.number().required(),
                     quantity: Yup.number().required(),
-                })
+                }),
             ),
         })
 
